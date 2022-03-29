@@ -6,13 +6,11 @@
     --border-menu-mobile: #A8A8B3;
     --text-color-menu-mobile: #E1E1E6;
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: none;
 }
-
 p,
 span,
 h1,
@@ -27,7 +25,6 @@ textarea {
     color: var(--text-color);
     text-decoration: none;
 }
-
 body {
 background: var(--backgrond);
    background-image: url(/assets/blur-1.png);
@@ -40,6 +37,21 @@ background: var(--backgrond);
     background-position: top right;
     width: 100%;
 }
+
+@keyframes arrowright {
+    0% {transform:translateX(0px)}
+    50% {transform:translateX(30px);
+    }
+    100% {transform:translateX(0px)}
+  }
+@keyframes arrowleft {
+    0% {transform:translateX(0px)}
+    50% {transform:translateX(-30px)}
+    100% {transform:translateX(0px)}
+  }
+
+
+
  /*Header */
 header nav {
     max-width: 1128px;
@@ -116,5 +128,22 @@ section h2 {
     font-size: 4rem;
     text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
     color: #000;
+    display: flex;
+  justify-content: center;
+}
+section p{
+    color: #000;
+}
+section .arrow-left{
+ animation-name: arrowleft;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+section .arrow-right{
+ animation-name: arrowright;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
  /*section */
